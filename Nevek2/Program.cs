@@ -42,7 +42,7 @@ namespace Nevek2
                     foreach (String nev in nevek)
                     {
                         bool jo = true;
-                        string[] darabok =nev.Trim().Split(' ');
+                        string[] darabok = nev.Trim().Split(' ');
                         foreach (String nevdarab in darabok)
                         {
                             if (!char.IsUpper(nevdarab.Trim()[0]))
@@ -53,7 +53,7 @@ namespace Nevek2
                         if (jo)
                         {
                             Console.WriteLine(nev.TrimStart());
-                        }   
+                        }
                     }
                 }
                 else if (valaszt == "3")
@@ -76,7 +76,19 @@ namespace Nevek2
                 }
                 else if (valaszt == "4")
                 {
-                    //4
+                    foreach (var nev in nevek)
+                    {
+                        bool jo = true;
+                        foreach (char betu in nev)
+                        {
+                            if (!(char.IsLetterOrDigit(betu) || betu! == ' '))
+                                jo = false;
+                        }
+
+                        if (jo)
+                            Console.WriteLine(nev);
+                        
+                    }
                 }
                 else if (valaszt == "5")
                 {
