@@ -58,20 +58,20 @@ namespace Nevek2
                 }
                 else if (valaszt == "3")
                 {
+                    Console.Clear();
                     foreach (var nev in nevek)
                     {
                         bool jo = true;
                         foreach (char betu in nev)
                         {
-                            if (char.IsNumber(betu))
+                            if ( (char.IsNumber(betu)))
                             {
                                 jo = false;
                             }
-                            if (jo)
-                            {
-                                Console.WriteLine(nev);
-                            }
                         }
+                        if (jo)
+                            Console.WriteLine(nev);
+
                     }
                 }
                 else if (valaszt == "4")
@@ -98,7 +98,19 @@ namespace Nevek2
                 }
                 else if (valaszt == "6")
                 {
-                    //6
+
+                    foreach (var nev in nevek)
+                    {
+                        bool jo = true;
+                        foreach (char betu in nev)
+                        {
+                            if (!char.IsLetter(betu) && betu != ' ')
+                                jo = false;
+                        }
+
+                        if (jo)
+                            Console.WriteLine(nev);
+                    }
                 }
                 else
                 {
