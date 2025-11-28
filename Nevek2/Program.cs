@@ -1,4 +1,6 @@
-﻿namespace Nevek2
+﻿using System.Threading.Tasks.Dataflow;
+
+namespace Nevek2
 {
     internal class Program
     {
@@ -36,7 +38,23 @@
                 }
                 else if (valaszt == "2")
                 {
-                    //2
+                    Console.Clear();
+                    foreach (String nev in nevek)
+                    {
+                        bool jo = true;
+                        string[] darabok =nev.Trim().Split(' ');
+                        foreach (String nevdarab in darabok)
+                        {
+                            if (!char.IsUpper(nevdarab.Trim()[0]))
+                            {
+                                jo = false;
+                            }
+                        }
+                        if (jo)
+                        {
+                            Console.WriteLine(nev.TrimStart());
+                        }   
+                    }
                 }
                 else if (valaszt == "3")
                 {
