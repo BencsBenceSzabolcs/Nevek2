@@ -10,7 +10,7 @@ namespace Nevek2
             nevek.Add("Kiss István");
             nevek.Add("Nagy Elemér");
             nevek.Add("kissándorjózsef23");
-            nevek.Add(" Tóth Ilona ");
+            nevek.Add(" Tóth# Ilona ");
             nevek.Add("Bencs Bence Szabolcs");
             while (true)
             {
