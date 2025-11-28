@@ -4,6 +4,12 @@
     {
         static void Main(string[] args)
         {
+            List<string> nevek = new List<string>();
+            nevek.Add("Kiss István");
+            nevek.Add("Nagy Elemér");
+            nevek.Add("kissándorjózsef23");
+            nevek.Add(" Tóth Ilona ");
+            nevek.Add("Bencs Bence Szabolcs");
             while (true)
             {
                 Console.Clear();
@@ -16,11 +22,38 @@
                 Console.WriteLine("6 Csak rendes nevek");
                 string valaszt = Console.ReadLine();
 
-                if(valaszt == "0")
+                if (valaszt == "0")
                 {
                     return;
                 }
-
+                else if (valaszt == "1")
+                {
+                    //1
+                }
+                else if (valaszt == "2")
+                {
+                    //2
+                }
+                else if (valaszt == "3")
+                {
+                    //3
+                }
+                else if (valaszt == "4")
+                {
+                    //4
+                }
+                else if (valaszt == "5")
+                {
+                    //5
+                }
+                else if (valaszt == "6")
+                {
+                    //6
+                }
+                else
+                {
+                    Console.Write("Nincs ilyen parancs");
+                }
             }
         }
     }
