@@ -8,7 +8,7 @@ namespace Nevek2
         {
             List<string> nevek = new List<string>();
             nevek.Add("Kiss István");
-            nevek.Add("Nagy Elemér");
+            nevek.Add("Nagy elemér");
             nevek.Add("kissándorjózsef23");
             nevek.Add(" Tóth# Ilona ");
             nevek.Add("Bencs Bence Szabolcs");
@@ -58,7 +58,21 @@ namespace Nevek2
                 }
                 else if (valaszt == "3")
                 {
-                    //3
+                    foreach (var nev in nevek)
+                    {
+                        bool jo = true;
+                        foreach (char betu in nev)
+                        {
+                            if (char.IsNumber(betu))
+                            {
+                                jo = false;
+                            }
+                            if (jo)
+                            {
+                                Console.WriteLine(nev);
+                            }
+                        }
+                    }
                 }
                 else if (valaszt == "4")
                 {
